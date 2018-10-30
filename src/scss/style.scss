@@ -1,0 +1,227 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #efeeee;
+}
+
+.wrapper {
+    text-align: center;
+    .container {
+        .row:first-child {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.product__card {
+    margin-top: 50px;
+    width: 270px;
+    padding: 10px;
+    border: 1px solid #e5e5e5;
+    transition: box-shadow 0.3s ease-in;
+    &:hover {
+        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);
+    }
+    @media (max-width: 1200px) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.product__img {
+    position: relative;
+    margin: -30px auto 12px;
+    display: flex;
+    width: 250px;
+    height: 250px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    & img {
+        margin: auto;
+    }
+    & span {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 70px;
+        height: 38px;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 38px;
+        &.sale {
+            background-color: #ed1111;
+            left: 0;
+        }
+        &.new {
+            background-color: #000;
+            right: 0;
+        } 
+    }
+}
+
+.product__title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333333;
+}
+
+.product__description {
+    font-size: 11px;
+    line-height: 15px;
+    font-weight: 300;
+    color: #a5a4a4;
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+
+.product__cost {
+    margin-right: 17px;
+    font-size: 25px;
+    font-weight: 500;
+    color: #333333;
+    text-transform: uppercase;
+}
+
+.product__cost_old {
+    font-size: 17px;
+    font-weight: 500;
+    color: #ed1111;
+    text-decoration:line-through;
+}
+
+.product__btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.btn {
+    display: inline-block;
+    width: 120px;
+    padding: 10px;
+    border: 1px solid #e5e5e5;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn__red {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #ed1111;
+    background-color: #fff;
+    transition: all 0.3s ease-in;
+    &:hover {
+        background-color: #ed8e8e;
+        border-color: #ed8e8e;
+    }
+}
+
+.btn__grey {
+    font-size: 12px;
+    font-weight: 300;
+    color: #999e9f;
+    background-color: #d9d9d9;
+    transition: all 0.3s ease-in;
+    &:hover {
+        color: #d9d9d9;
+        background-color: #999e9f; 
+    }
+}
+
+.information {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 1200px) {
+        // flex-direction: column;
+        // align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.informations__item {
+    width: 370px;
+    padding: 40px 20px 55px 25px;
+    border: 1px solid #e5e5e5; 
+    @media (max-width: 1200px) {
+        margin: 7.5px; 
+    }
+}
+
+.informations__title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #333333;
+    text-transform: uppercase;
+}
+
+.informations__description,
+.informations__description_item {
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 15px;
+    color: #a5a4a4;
+    margin-top: 0;
+    margin-bottom: 13px;
+}
+
+.informations__description_item {
+    display: block;
+    margin-bottom: 0;
+    & + .informations__description_item {
+        margin-top: 10px;
+    }
+    & .fa-caret-right {
+        font-size: 11px;
+        color: #ed1111;
+        margin-right: 10px;
+    }
+}
+
+.information__contact {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    & .fas,
+    & .fab,
+    & .far {
+        font-size: 31px;
+        color: #ed1111;
+        margin-right: 10px;
+    }
+    & .fa-phone {
+        transform: rotate(90deg);
+    }
+    & + .information__contact {
+        margin-top: 15px;
+    }
+    & .informations__description_item {
+        display: inline-block;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    & a {
+        margin-left: 5px;
+        text-decoration: none;
+        transition: color 0.3s ease-in;
+        &:hover {
+            color: #ed1111;
+        }
+    }
+    & .information__contact_email {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between
+    }
+}
